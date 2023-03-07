@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+</head>
+<body>
+    
+    <div class="wrapper">
+        <div class="heading">
+            <p>WEATHER APP</p>
+        </div> 
+
+        <div class="btns">
+            <button class="screen-switch-btn" data-userWeather>
+                Your Weather
+            </button>
+            <button class=" screen-switch-btn " data-searchWeather>
+                Search Weather
+            </button>
+        </div>
+
+        <!-- Weather conatiner section for all 4 screens -->
+        <div class="weatherContainer">
+           
+            <!-- Grant Location -->
+                <div class="grant-location-container">
+                    <img loading="lazy" src="/assets/location.png" alt="" width="80px">
+                    <div class="grant-info">
+                        <div class="ask-location">Grant Location Access</div>
+                        <div class="disc">Allow Access To Get Weather Information</div>
+                    </div>
+                    <!-- btn  -->
+                    <button class="access-btn" data-grant-access>
+                        Grant Access
+                    </button>
+                </div>
+
+            <!-- Search Weather -->
+                <form class="form-container " data-search-form>
+                    <input class="input" placeholder="Search for city..." data-searchInput >
+                    <button class="searchBtn" type="submit">
+                        <img src="assets/search.png" alt="" width="16px">
+                    </button>
+                </form>
+
+            <!-- Loading screen container -->
+                <div class="loading-container">
+                    <img src="assets/loading.gif" alt="" width="180px">
+                    <p>Loading</p>
+                </div>
+               
+            <!-- Show weather info -->
+
+                <div class="user-info-container">
+                    
+                    <!-- City name and flag -->
+                    <div class="name">
+                        <p class="data-city-name" data-city-name></p>
+                        <img data-city-flag src="" alt="" width="40px">
+                    </div>
+                          
+                    <!-- weather info  -->
+                    <div class="info-container">
+                        <p class="data-weather-info" data-weather-info></p>
+                        <img class="data-weather-icon" data-weather-icon src="" alt="">
+                        <p class="data-temp" data-temp></p>
+                    </div>
+                    
+                    <!-- cards -->
+                    <div class="parameter-container">
+                        
+                        <!-- card-1 -->
+                        <div class="parameter">
+                            <img src="assets/wind.png" alt="" width="60px">
+                            <p>WINDSPEED</p>
+                            <p data-wind-speed></p>
+                        </div>
+
+                         <!-- card-2 -->
+                         <div class="parameter">
+                            <img src="assets/humidity.png" alt="" width="60px">
+                            <p>HUMIDITY</p>
+                            <p data-humidity></p>
+                        </div>
+                   
+                         <!-- card-3 -->
+                         <div class="parameter">
+                            <img src="assets/cloud.png" alt="" width="60px">
+                            <p>CLOUDS</p>
+                            <p data-clouds></p>
+                        </div>
+
+                    </div>
+
+
+
+
+
+                </div>
+
+        </div>
+    </div>
+
+<script src="action.js"></script>
+</body>
+</html>

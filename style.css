@@ -1,0 +1,281 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-weight: 100;
+}
+
+
+
+body{
+    overflow-y: hidden;
+    
+    height: 100vh;
+    background-color: #112d4e;
+    background-image: linear-gradient(160deg, #112d4e 0%, #3f72af 100%);}
+
+
+
+
+/* Common in all Screens */
+
+
+
+    .screen-switch-btn{
+
+        cursor: pointer;
+        border: 0;
+        background-color: transparent;
+        color: white;
+        font-size: large;
+        letter-spacing: 1.5px;
+        
+    }
+
+    /* Selected screen btn background change */
+
+    .btn-effect{
+
+        background-color: #7b8ea9;
+        padding: .2rem;
+        border-radius: 4px;
+       
+        
+    }
+
+    .weatherContainer{
+
+        width: 80%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        
+    }
+
+
+    /* Temp implementation  */
+    /* .test{
+
+        opacity: 0;
+        display: none;
+    } */
+    
+    .heading{
+
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 2%;
+        font-weight: 700;
+        font-size: xx-large;
+    }
+
+    .screen-switch-btn{
+        font-size: large;
+    }
+    .btns{
+    /* 
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 4%;
+        gap: 20rem; */
+
+    /* max width is not responsive !! */
+        width:80%;  
+        max-width: 1000px;
+        margin: auto;
+        display: flex;
+        padding: 4%;
+        flex-direction: row;
+        justify-content: space-evenly;
+        
+    }
+/* -------------------------------------- */
+
+/* Screen 1 Your weather  */
+
+    .user-info-container{
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        /* background-color: black; */
+        scale: 1.1;
+        display: none;
+    }
+
+    .data-weather-info {
+        font-size: x-large;
+        color: rgb(235, 226, 226);
+
+    }
+
+    .data-city-name {
+
+        font-size: xx-large;
+
+    }
+
+    .name{
+        display: flex;
+        gap: 5px;
+        color: white;
+    }
+
+    .info-container{
+        margin: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .parameter-container{
+
+        display: flex;
+        gap: 20px;
+    
+        
+    }
+
+    .parameter{
+        background-color:rgba(219, 226, 239, 0.5);
+        border-radius: 5px;
+        color: white ;
+        width: 10rem;
+        height: 8rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+    }
+
+/* -------------------------------------- */
+
+/* Screen 2 Loading  */
+
+    .loading-container{
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        color: white;
+
+        display: none;
+    }
+/* 
+    .form-container{
+        display: none;
+    } */
+    /* .grant-location-container{
+        display: none;
+    } */
+
+/* -------------------------------------- */
+
+/* Screen 3 Search Bar */
+
+    .form-container{
+
+        display: flex;
+        gap: 20px;
+        justify-content: center ;
+        display: none;
+        margin-bottom: 7ch;
+    }
+
+    .input{
+        background-color: #7d91ac;
+        border: 0;
+        border-radius: 7px;
+        width: 25rem; 
+        padding: 1rem;
+        color: #d3e0f0;
+        height: 30px;
+    }
+    
+    .searchBtn{
+
+        border-radius: 100%;
+        width: 2rem;
+        height: 2rem;
+        background-color: #3f72af;
+        border: 0;
+        cursor: pointer;
+    }
+/* -------------------------------------- */
+
+/* Screen 4 Location access */
+
+    .grant-location-container {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 30px;
+        color: white;
+
+        display: none;
+    }
+
+    .grant-info{
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .ask-location{
+        font-weight: 600;
+        font-size: x-large;
+    }
+    .disc{
+
+        font-size: x-small;
+        color: #F9F7F7;
+        letter-spacing: 1.3px;
+    }
+    .access-btn{
+
+        cursor: pointer;
+        color: white;
+        background-color:#3f72af ;
+        border: 0;
+        padding: .4rem;
+        width: 8rem;
+        text-transform: uppercase;
+        border-radius: 5px;
+    }
+    
+ 
+/* -------------------------------------- */
+    
+.active {
+
+    display: flex;
+
+}
+
+/* some touch up on size  */
+
+.data-temp{
+
+    color: rgb(240, 209, 209);
+    
+    font-size: xx-large;
+}
