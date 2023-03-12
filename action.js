@@ -44,6 +44,11 @@ const weatherContainer = document.querySelector('.weatherContainer');
 const userTab = document.querySelector("[data-userWeather]");
 const searchTab = document.querySelector("[data-searchWeather]");
 
+
+const apiErrorContainer = document.querySelector(".api-error-container")
+const apiErrorMessage = document.querySelector("[data-apiErrorText]");
+const apiErrorBtn = document.querySelector("[data-apiErrorBtn]");
+
 //  Initial variables needed 
 
 let currentTab = userTab;
@@ -212,6 +217,8 @@ searchBtn.addEventListener("click",(e)=>{
     }
 })
 
+
+
 async function fetchSearchWeatherInfo(cityName){
 
     loadingContainer.classList.add('active');
@@ -223,11 +230,21 @@ async function fetchSearchWeatherInfo(cityName){
         const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${APIkey}&units=metric`);
         const data = await response.json();
 
+        if (data.cod == '404') {
+            throw data;
+          }
+
         loadingContainer.classList.remove('active');
         userContainer.classList.add('active');
         renderWeatherInfo(data);
 
-    } catch (error) {
-        console.log('got an err need help')
+        } catch (e) {
+
+        loadingContainer.classList.remove("active");
+        apiErrorContainer.classList.add("active");
+        apiErrorMessage.innerText = `${e?.message}`;
+       
+
+        console.log('got an error');
     }
 }

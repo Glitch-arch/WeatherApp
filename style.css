@@ -264,8 +264,31 @@ body{
     }
     
  
+
+
 /* -------------------------------------- */
+
+.api-error-container {
+    display: none;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.api-error-container p {
+    text-align: center;
+}
+
+.api-error-img{
+    width: 100%;
+    max-width: 300px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
     
+}
+
+
+
 .active {
 
     display: flex;
