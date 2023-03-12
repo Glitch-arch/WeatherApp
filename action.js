@@ -155,6 +155,8 @@ function switchTab(clickedTab){
             userContainer.classList.remove('active');
             searchContainer.classList.remove('active');
             
+            apiErrorContainer.classList.remove("active");
+
             // Need userInfo , for that we need its geoloaction i,e coordinates , so we need a function
             // Coordinates saved in the session
             getfromSessionStorage();
